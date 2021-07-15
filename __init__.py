@@ -1,1 +1,1 @@
-import pygamegui.button
+from pygamegui import button
