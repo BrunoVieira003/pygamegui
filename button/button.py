@@ -33,12 +33,12 @@ class Button(pygame.Rect):
             self._parent.blit(image, [self.x, self.y])
             
     
-    def listen(self):
+    def listen(self, event):
         pos = pygame.mouse.get_pos()
         self.current_bg = self.background
         if self.collidepoint(pos):
             self.current_bg = self.hover_bg
-            if pygame.mouse.get_pressed()[0]:
+            if event.type == pygame.MOUSEBUTTONDOWN:
                 self.current_bg = self.click_bg
                 self.callback()
     
