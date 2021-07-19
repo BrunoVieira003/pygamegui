@@ -1,0 +1,1 @@
+from pygamegui.text.label import Label
